@@ -14,7 +14,7 @@ namespace SignalRChat
         public SqlDataAdapter sda;
         public SqlDataReader sdr;
         public DataSet ds = new DataSet();
-        public SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conStr"].ToString());
+        public SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\coding\asp.net\SR\SignalRChat\App_Data\Database1.mdf;Integrated Security=True");
 
         public bool IsExist(string Query)
         {
