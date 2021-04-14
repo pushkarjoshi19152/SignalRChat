@@ -27,6 +27,34 @@
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
+        Designation : 
+          <asp:DropDownList ID="Badge" runat="server">
+              <asp:ListItem>Student</asp:ListItem>
+              <asp:ListItem>Professor</asp:ListItem>
+              <asp:ListItem>HOD</asp:ListItem>
+              <asp:ListItem>CR</asp:ListItem>
+              <asp:ListItem>Principal</asp:ListItem>
+          </asp:DropDownList>
+&nbsp;<span class="glyphicon glyphicon-user form-control-feedback"></span></div>
+      <div class="form-group has-feedback">
+        Department :&nbsp;
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+          <asp:DropDownList ID="Department" runat="server">
+              <asp:ListItem>Mechanical</asp:ListItem>
+              <asp:ListItem>Civil</asp:ListItem>
+              <asp:ListItem>Electrical</asp:ListItem>
+              <asp:ListItem>CSE</asp:ListItem>
+              <asp:ListItem>IT</asp:ListItem>
+              <asp:ListItem>ENTC</asp:ListItem>
+              <asp:ListItem>Mathematics</asp:ListItem>
+              <asp:ListItem>Science</asp:ListItem>
+          </asp:DropDownList>
+      </div>
+      <div class="form-group has-feedback">
+        <input id="EnrollNo" type="text" class="form-control" placeholder="Enrollment No" required="" runat="server">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
         <input id="txtEmail" type="email" class="form-control" placeholder="Email" required="required" runat="server">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>

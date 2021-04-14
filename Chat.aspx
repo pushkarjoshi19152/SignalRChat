@@ -84,9 +84,14 @@
         function registerEvents(chatHub) {
 
             var name = '<%# this.UserName %>';
+            var badge = '<%# this.UserBadge %>';
+            var enrollno = '<%# this.UserEnrollNo %>';
+            var department = '<%# this.UserDepartment %>';
+            var email = '<%# this.UserEmail %>';
+
 
             if (name.length > 0) {
-                chatHub.server.connect(name);
+                chatHub.server.connect(name, badge, enrollno, department, email);
 
             }
 

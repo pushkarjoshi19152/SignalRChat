@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using Microsoft.AspNet.SignalR;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 
 namespace SignalRChat
@@ -14,7 +16,7 @@ namespace SignalRChat
         static List<Messages> CurrentMessage = new List<Messages>();
         ConnClass ConnC = new ConnClass();
 
-        public void Connect(string userName)
+        public void Connect(string userName, string userBadge, string userEnrollNo, string userDepartment, string userEmail)
         {
             var id = Context.ConnectionId;
 
@@ -24,7 +26,7 @@ namespace SignalRChat
                 string UserImg = GetUserImage(userName);
                 string logintime = DateTime.Now.ToString();
 
-                ConnectedUsers.Add(new Users { ConnectionId = id, UserName = userName, UserImage = UserImg, LoginTime = logintime });
+                ConnectedUsers.Add(new Users { ConnectionId = id, UserName = userName, UserImage = UserImg, LoginTime = logintime,Badge=userBadge,EnrollNo=userEnrollNo,Department= userDepartment,Email=userEmail});
                 // send to caller
                 Clients.Caller.onConnected(id, userName, ConnectedUsers, CurrentMessage);
 
@@ -89,6 +91,29 @@ namespace SignalRChat
             return base.OnDisconnected(stopCalled);
         }
 
+        public void CreateTableFor(string table_name)
+        {
+
+            string CreateTableQuery = "CREATE TABLE "+table_name+"(time varchar(30), message varchar(20))";
+            ConnC.ExecuteQuery(CreateTableQuery);
+            
+        }
+
+        public void AddMessageTo(string table_name,string message)
+        {
+            try
+            {
+                string AddMessageQuery = "insert into "+ table_name + "(time,message) values('"+ DateTime.Now.ToString() +"','"+ message +"')";
+                ConnC.ExecuteQuery(AddMessageQuery);
+            }
+            catch(Exception e)
+            {
+                ConnC.con.Close();
+                CreateTableFor(table_name);
+                AddMessageTo(table_name,message);
+            }
+        }
+
         public void SendPrivateMessage(string toUserId, string message)
         {
 
@@ -96,7 +121,12 @@ namespace SignalRChat
 
             var toUser = ConnectedUsers.FirstOrDefault(x => x.ConnectionId == toUserId);
             var fromUser = ConnectedUsers.FirstOrDefault(x => x.ConnectionId == fromUserId);
-
+            string fromUserEnrollNo = fromUser.EnrollNo;
+            string toUserEnrollNo = toUser.EnrollNo;
+            //tablename for this conversation
+            string table_name = "f"+fromUserEnrollNo+"to"+toUserEnrollNo;
+            
+            AddMessageTo(table_name,message);
             if (toUser != null && fromUser != null)
             {
                 string CurrentDateTime = DateTime.Now.ToString();

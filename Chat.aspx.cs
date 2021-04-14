@@ -16,15 +16,26 @@ namespace SignalRChat
     public partial class Chat : System.Web.UI.Page
     {
         public string UserName = "admin";
+        public string UserBadge = "admin";
+        public string UserEnrollNo = "admin";
+        public string UserDepartment = "admin";
         public string UserImage = "/images/DP/dummy.png";
         protected string UploadFolderPath = "~/Uploads/";
         ConnClass ConnC = new ConnClass();
+        private string fromUser = "";
+        public string UserEmail = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["UserName"] != null)
             {
                 UserName = Session["UserName"].ToString();
+                UserBadge = Session["UserBadge"].ToString();
+                UserEnrollNo = Session["UserEnrollNo"].ToString();
+                UserDepartment = Session["UserDepartment"].ToString();
+                UserEmail = Session["UserEmail"].ToString();
+                fromUser += UserName;
                 GetUserImage(UserName);
+
             }
             else
                 Response.Redirect("Login.aspx");
