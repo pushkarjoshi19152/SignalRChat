@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SignalRChat {
-    
-    
-    public partial class Register {
-        
+namespace SignalRChat
+{
+
+
+    public partial class Register
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace SignalRChat {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// txtName control.
         /// </summary>
@@ -29,7 +31,34 @@ namespace SignalRChat {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtName;
-        
+
+        /// <summary>
+        /// Badge control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Badge;
+
+        /// <summary>
+        /// Department control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Department;
+
+        /// <summary>
+        /// EnrollNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText EnrollNo;
+
         /// <summary>
         /// txtEmail control.
         /// </summary>
@@ -38,7 +67,7 @@ namespace SignalRChat {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtEmail;
-        
+
         /// <summary>
         /// txtPassword control.
         /// </summary>
@@ -47,7 +76,7 @@ namespace SignalRChat {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtPassword;
-        
+
         /// <summary>
         /// txtPasswordR control.
         /// </summary>
@@ -56,7 +85,7 @@ namespace SignalRChat {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword txtPasswordR;
-        
+
         /// <summary>
         /// chkTerms control.
         /// </summary>
@@ -65,7 +94,7 @@ namespace SignalRChat {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox chkTerms;
-        
+
         /// <summary>
         /// btnRegister control.
         /// </summary>

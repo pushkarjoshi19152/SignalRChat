@@ -23,7 +23,14 @@ namespace SignalRChat
             {
                 string UserName = ConnC.GetColumnVal(Query, "UserName");
                 Session["UserName"] = UserName;
-                Session["Email"] = txtEmail.Value;
+                string Badge = ConnC.GetColumnVal(Query, "Badge");
+                Session["UserBadge"] = Badge;
+                string EnrollNo = ConnC.GetColumnVal(Query, "EnrollNo");
+                Session["UserEnrollNo"] = EnrollNo;
+                string Department = ConnC.GetColumnVal(Query, "Department");
+                Session["UserDepartment"] = Department;
+               
+                Session["UserEmail"] = txtEmail.Value;
                 Response.Redirect("Chat.aspx");
             }
             else
