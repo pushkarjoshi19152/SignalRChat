@@ -124,8 +124,18 @@ namespace SignalRChat
             string fromUserEnrollNo = fromUser.EnrollNo;
             string toUserEnrollNo = toUser.EnrollNo;
             //tablename for this conversation
-            string table_name = "f"+fromUserEnrollNo+"to"+toUserEnrollNo;
-            
+            string table_name;
+            try
+            {
+                table_name = fromUser.TableNameFor[toUser.EnrollNo];
+            }
+            catch(Exception e)
+            {
+                string[] arr = new string[] { fromUserEnrollNo, toUserEnrollNo };
+                Array.Sort(arr);
+                fromUser.TableNameFor.Add(toUser.EnrollNo,"f"+arr[0]+"to"+arr[1]);
+                table_name = fromUser.TableNameFor[toUser.EnrollNo];
+            }
             AddMessageTo(table_name,message);
             if (toUser != null && fromUser != null)
             {

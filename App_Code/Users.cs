@@ -18,6 +18,7 @@ namespace SignalRChat
         public string Department { get; set; }
         public string Email { get; set; }
 
+        public Dictionary<string, string> TableNameFor = new Dictionary<string, string>();
 
     }
 }
