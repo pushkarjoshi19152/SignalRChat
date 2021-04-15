@@ -1,7 +1,7 @@
 To run the project =====>
--Add mysql database on localhost
--Name it `temp`
--Create a new table by running following script :
+->Add mysql database on localhost
+->Name it `temp`
+->Create a new table by running following script :
 
 CREATE TABLE `tbl_users` (
   `UserName` text NOT NULL,
