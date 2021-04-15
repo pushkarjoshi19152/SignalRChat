@@ -34,35 +34,53 @@
     <script type="text/javascript" src="Scripts/jquery.slimscroll.min.js"></script>
     <script type="text/javascript" src="Scripts/connection.js"></script>
     <script type="text/javascript">
+
         $(function () {
             var chatHub = $.connection.chatHub;
            // registerClientMethods(chatHub);
             // Start Hub
             $.connection.hub.start().done(function () {
+
                 console.log("connection succeded");
+
             });
             $('#sendbutton1').click(function () {
+
                 var msg = $('#txtmsg').val();
+
                 if (true) {
+
                    // var userName = $('#hdUserName').val();
                     var userName = "pushkar";
                     //var date = GetCurrentDateTime(new Date());
                     var date = "date";
+
                     chatHub.server.sendMessageToAll(userName, msg, date);
                     $("#textmsg1").val('');
                 }
             });
             chatHub.client.messageReceived = function (userName, message, time, userimg) {
+
                 AddMessage(userName, message, time, userimg);
+
                 // Display Message Count and Notification
                
             }
             function AddMessage(userName, message, time, userimg) {
+
                 alert("message received");
             }
+
         })();
        
        
+
+
+
+
+
+
+
     </script>
 </head>
 <body>

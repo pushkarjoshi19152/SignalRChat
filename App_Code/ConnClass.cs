@@ -14,7 +14,7 @@ namespace SignalRChat
         public MySqlDataAdapter sda;
         public MySqlDataReader sdr;
         public DataSet ds = new DataSet();
-        public MySqlConnection con = new MySqlConnection(@"Server=localhost;Database=temp;Uid=root;Pwd=");
+        public MySqlConnection con = new MySqlConnection(@"server=localhost;user id=root;database=temp");
 
         public bool IsExist(string Query)
         {
