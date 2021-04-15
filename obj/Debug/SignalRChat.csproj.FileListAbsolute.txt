@@ -78,3 +78,39 @@ E:\coding\asp.net\copy of SR\SR\SignalRChat\obj\Debug\SignalRChat.csproj.CoreCom
 E:\coding\asp.net\copy of SR\SR\SignalRChat\obj\Debug\SignalRChat.csproj.CopyComplete
 E:\coding\asp.net\copy of SR\SR\SignalRChat\obj\Debug\SignalRChat.dll
 E:\coding\asp.net\copy of SR\SR\SignalRChat\obj\Debug\SignalRChat.pdb
+E:\coding\asp.net\geca signalr\bin\SignalRChat.dll.config
+E:\coding\asp.net\geca signalr\bin\SignalRChat.dll
+E:\coding\asp.net\geca signalr\bin\SignalRChat.pdb
+E:\coding\asp.net\geca signalr\bin\AjaxControlToolkit.dll
+E:\coding\asp.net\geca signalr\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\coding\asp.net\geca signalr\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\coding\asp.net\geca signalr\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\coding\asp.net\geca signalr\bin\Microsoft.Owin.dll
+E:\coding\asp.net\geca signalr\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\coding\asp.net\geca signalr\bin\Microsoft.Owin.Security.dll
+E:\coding\asp.net\geca signalr\bin\MySql.Data.dll
+E:\coding\asp.net\geca signalr\bin\Newtonsoft.Json.dll
+E:\coding\asp.net\geca signalr\bin\Owin.dll
+E:\coding\asp.net\geca signalr\bin\Google.Protobuf.dll
+E:\coding\asp.net\geca signalr\bin\Zstandard.Net.dll
+E:\coding\asp.net\geca signalr\bin\K4os.Compression.LZ4.Streams.dll
+E:\coding\asp.net\geca signalr\bin\BouncyCastle.Crypto.dll
+E:\coding\asp.net\geca signalr\bin\Ubiety.Dns.Core.dll
+E:\coding\asp.net\geca signalr\bin\Renci.SshNet.dll
+E:\coding\asp.net\geca signalr\bin\System.Buffers.dll
+E:\coding\asp.net\geca signalr\bin\K4os.Compression.LZ4.dll
+E:\coding\asp.net\geca signalr\bin\K4os.Hash.xxHash.dll
+E:\coding\asp.net\geca signalr\bin\System.Memory.dll
+E:\coding\asp.net\geca signalr\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\coding\asp.net\geca signalr\bin\System.Numerics.Vectors.dll
+E:\coding\asp.net\geca signalr\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\coding\asp.net\geca signalr\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\coding\asp.net\geca signalr\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\coding\asp.net\geca signalr\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\coding\asp.net\geca signalr\bin\Microsoft.Owin.Security.xml
+E:\coding\asp.net\geca signalr\bin\MySql.Data.xml
+E:\coding\asp.net\geca signalr\obj\Debug\SignalRChat.csprojAssemblyReference.cache
+E:\coding\asp.net\geca signalr\obj\Debug\SignalRChat.csproj.CoreCompileInputs.cache
+E:\coding\asp.net\geca signalr\obj\Debug\SignalRChat.csproj.CopyComplete
+E:\coding\asp.net\geca signalr\obj\Debug\SignalRChat.dll
+E:\coding\asp.net\geca signalr\obj\Debug\SignalRChat.pdb

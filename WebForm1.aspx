@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server"> <meta charset="utf-8"/>
+<head runat="server">
+    <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
   <!-- Bootstrap CSS -->
@@ -11,7 +12,7 @@
     integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous"/>
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/StyleSheet1.css"/>
+  <link rel="stylesheet" href="StyleSheet1.css"/>
 
     <title>WhatsApp Web</title>
      <link href="Content/bootstrap.css" rel="stylesheet" />
@@ -37,7 +38,7 @@
 
         $(function () {
             var chatHub = $.connection.chatHub;
-           // registerClientMethods(chatHub);
+            // registerClientMethods(chatHub);
             // Start Hub
             $.connection.hub.start().done(function () {
 
@@ -50,7 +51,7 @@
 
                 if (true) {
 
-                   // var userName = $('#hdUserName').val();
+                    // var userName = $('#hdUserName').val();
                     var userName = "pushkar";
                     //var date = GetCurrentDateTime(new Date());
                     var date = "date";
@@ -64,7 +65,7 @@
                 AddMessage(userName, message, time, userimg);
 
                 // Display Message Count and Notification
-               
+
             }
             function AddMessage(userName, message, time, userimg) {
 
@@ -72,8 +73,8 @@
             }
 
         })();
-       
-       
+
+
 
 
 
@@ -82,11 +83,11 @@
 
 
     </script>
+
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-             <div class="back-container">
+         <div class="back-container">
     <div class="container-fluid front-container">
       <div class="back-top"></div>
       <div class="back-main"></div>
@@ -138,82 +139,14 @@
           <div class="contact-table-scroll">
             <table class="table table-hover">
               <tbody>
-                <tr>
+                  <% foreach (string a in this.RegisteredUsers)
+                      { %>
+                  <tr>
                   <td><img src="images/p2.jpg" alt="" class="profile-image rounded-circle"></td>
-                  <td>Rahul Kumar <br> <small>achi chal rahi</small></td>
+                  <td><% =a %> <br> <small>achi chal rahi</small></td>
                   <td><small>11:55 PM</small></td>
                 </tr>
-                <tr>
-                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
-                  <td>Jack <br> <small>Bye tata</small></td>
-                  <td><small>10:09 PM</small></td>
-                </tr>
-                <tr>
-                  <td><img src="images/p4.jpg" alt="" class="profile-image rounded-circle"></td>
-                  <td>Bullywood Mafia <br> <small>Drg Drg Drg</small></td>
-                  <td><small>Monday</small></td>
-                </tr>
-                <tr>
-                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
-                  <td>Sumit Jha<br> <small>Corona ho gaya kya</small></td>
-                  <td><small>9/22/20</small></td>
-                </tr>
-                <tr>
-                  <td><img src="images/p6.jpg" alt="" class="profile-image rounded-circle"></td>
-                  <td>News Channel <br> <small>Bekar news only</small></td>
-                  <td><small>Sunday</small></td>
-                </tr>
-                <!-- start -->
-                <tr>
-                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
-                  <td>Ali <br> <small>Hello</small></td>
-                  <td><small>Sunday</small></td>
-                </tr>
-                <tr>
-                  <td><img src="images/p5.jpg" alt="" class="profile-image rounded-circle"></td>
-                  <td>Afreen <br> <small>Nahi main nahi janti</small></td>
-                  <td><small>Sunday</small></td>
-                </tr>
-                <tr>
-                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
-                  <td>Geeky Shows <br> <small>PPT nahi mila</small></td>
-                  <td><small>Sunday</small></td>
-                </tr>
-                <tr>
-                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
-                  <td>Sofia <br> <small>God Bless You</small></td>
-                  <td><small>Sunday</small></td>
-                </tr>
-                <tr>
-                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
-                  <td>Kunal <br> <small>Nikl lo</small></td>
-                  <td><small>Sunday</small></td>
-                </tr>
-                <tr>
-                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
-                  <td>Kunal <br> <small>Nikl lo</small></td>
-                  <td><small>Sunday</small></td>
-                </tr>
-                <tr>
-                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
-                  <td>Kunal <br> <small>Nikl lo</small></td>
-                  <td><small>Sunday</small></td>
-                </tr>
-                <tr>
-                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
-                  <td>Kunal <br> <small>Nikl lo</small></td>
-                  <td><small>Sunday</small></td>
-                </tr>
-                <tr>
-                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
-                  <td>Kunal <br> <small>Nikl lo</small></td>
-                  <td><small>Sunday</small></td>
-                </tr>
-                <tr>
-                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
-                  <td>Kunal <br> <small>Nikl lo</small></td>
-                  <td><small>Sunday</small></td>
-                </tr>
+                    <% } %>
                 <!-- end -->
               </tbody>
             </table>
@@ -369,7 +302,9 @@
     </div>
 
   </div>
-        </div>
+
+        
     </form>
+
 </body>
 </html>
