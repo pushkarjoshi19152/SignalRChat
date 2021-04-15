@@ -7,9 +7,7 @@ using Microsoft.AspNet.SignalR;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-/*
- comment from pradip
- */
+
 namespace SignalRChat
 {
     public class ChatHub : Hub
