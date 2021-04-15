@@ -1,10 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SignalRChat.WebForm1" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SignalRChat.WebForm1" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta charset="utf-8"/>
+<head runat="server"> <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
   <!-- Bootstrap CSS -->
@@ -12,7 +11,7 @@
     integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous"/>
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="StyleSheet1.css"/>
+  <link rel="stylesheet" href="css/StyleSheet1.css"/>
 
     <title>WhatsApp Web</title>
      <link href="Content/bootstrap.css" rel="stylesheet" />
@@ -35,59 +34,41 @@
     <script type="text/javascript" src="Scripts/jquery.slimscroll.min.js"></script>
     <script type="text/javascript" src="Scripts/connection.js"></script>
     <script type="text/javascript">
-
         $(function () {
             var chatHub = $.connection.chatHub;
            // registerClientMethods(chatHub);
             // Start Hub
             $.connection.hub.start().done(function () {
-
                 console.log("connection succeded");
-
             });
             $('#sendbutton1').click(function () {
-
                 var msg = $('#txtmsg').val();
-
                 if (true) {
-
                    // var userName = $('#hdUserName').val();
                     var userName = "pushkar";
                     //var date = GetCurrentDateTime(new Date());
                     var date = "date";
-
                     chatHub.server.sendMessageToAll(userName, msg, date);
                     $("#textmsg1").val('');
                 }
             });
             chatHub.client.messageReceived = function (userName, message, time, userimg) {
-
                 AddMessage(userName, message, time, userimg);
-
                 // Display Message Count and Notification
                
             }
             function AddMessage(userName, message, time, userimg) {
-
                 alert("message received");
             }
-
         })();
        
        
-
-
-
-
-
-
-
     </script>
-
 </head>
 <body>
     <form id="form1" runat="server">
-         <div class="back-container">
+        <div>
+             <div class="back-container">
     <div class="container-fluid front-container">
       <div class="back-top"></div>
       <div class="back-main"></div>
@@ -370,9 +351,7 @@
     </div>
 
   </div>
-
-        
+        </div>
     </form>
-
 </body>
 </html>
