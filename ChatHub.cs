@@ -6,6 +6,7 @@ using System.Web;
 using Microsoft.AspNet.SignalR;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using MySql.Data.MySqlClient;
 
 
 namespace SignalRChat
@@ -14,6 +15,7 @@ namespace SignalRChat
     {
         static List<Users> ConnectedUsers = new List<Users>();
         static List<Messages> CurrentMessage = new List<Messages>();
+        public List<string> RegisteredUsers = new List<string>();
         ConnClass ConnC = new ConnClass();
 
         public void Connect(string userName, string userBadge, string userEnrollNo, string userDepartment, string userEmail)
@@ -31,6 +33,10 @@ namespace SignalRChat
                 
                //send to caller
                Clients.Caller.onConnected(id, userName, ConnectedUsers, CurrentMessage);
+                string GetRegisteredUsersQuery = "select UserName from tbl_users";
+                RegisteredUsers = ConnC.GetAllFromColumn(GetRegisteredUsersQuery, "UserName");
+
+                Clients.Caller.loadRegisteredUsers(RegisteredUsers);
 
                 // send to all except caller client
              //       Clients.AllExcept(id).onNewUserConnected(id, userName, UserImg, logintime);

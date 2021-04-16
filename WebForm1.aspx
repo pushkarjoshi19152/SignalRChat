@@ -150,17 +150,18 @@
         <div class="col-sm-4 contacts">
           <div class="contact-table-scroll">
             <table class="table table-hover">
-              <tbody>
-                  <% foreach (string a in this.RegisteredUsers)
+              <tbody id="registered_users">
+                 <%-- <% foreach (string a in this.RegisteredUsers)
                       { %>
                   <tr>
                   <td><img src="images/p2.jpg" alt="" class="profile-image rounded-circle"/></td>
                   <td><% =a %> <br/> <small>achi chal rahi</small></td>
                     
                   <td><small>11:55 PM</small></td>
-                    <% } %>
+                  
                 </tr>
-                <tr>
+                    <% } %>--%>
+                <%--<tr>
                   <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
                   <td>Jack <br> <small>Bye tata</small></td>
                   <td><small>10:09 PM</small></td>
@@ -230,7 +231,7 @@
                   <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
                   <td>Kunal <br> <small>Nikl lo</small></td>
                   <td><small>Sunday</small></td>
-                </tr>
+                </tr>--%>
                 <!-- end -->
               </tbody>
             </table>
