@@ -35,6 +35,23 @@ namespace SignalRChat
 
         }
 
+        public List<MySqlDataReader> GetAllData(string Query)
+        {
+            List<MySqlDataReader> RetVal = new List<MySqlDataReader>();
+            using (cmd = new MySqlCommand(Query, con))
+            {
+                con.Open();
+                sdr = cmd.ExecuteReader();
+                while (sdr.Read())
+                {
+                    RetVal.Add(sdr);
+                }
+                sdr.Close();
+                con.Close();
+            }
+
+            return RetVal;
+        }
         public List<string> GetAllFromColumn(string Query, string ColumnName)
         {
             List<string> RetVal = new List<string>();

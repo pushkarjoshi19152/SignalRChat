@@ -1,4 +1,5 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SignalRChat.WebForm1" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 
 <!DOCTYPE html>
 
@@ -106,7 +107,7 @@
     <div class="container front-container1">
       <div class="row chat-top">
         <div class="col-sm-4 border-right border-secondary">
-          <img src="images/p3.jpg" alt="" class="profile-image rounded-circle">
+          <img src="images/p3.jpg" alt="" class="profile-image rounded-circle"/>
           <span class="float-right mt-2">
             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-circle" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
@@ -150,10 +151,14 @@
           <div class="contact-table-scroll">
             <table class="table table-hover">
               <tbody>
-                <tr>
-                  <td><img src="images/p2.jpg" alt="" class="profile-image rounded-circle"></td>
-                  <td>Rahul Kumar <br> <small>achi chal rahi</small></td>
+                  <% foreach (string a in this.RegisteredUsers)
+                      { %>
+                  <tr>
+                  <td><img src="images/p2.jpg" alt="" class="profile-image rounded-circle"/></td>
+                  <td><% =a %> <br/> <small>achi chal rahi</small></td>
+                    
                   <td><small>11:55 PM</small></td>
+                    <% } %>
                 </tr>
                 <tr>
                   <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
