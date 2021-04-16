@@ -21,7 +21,7 @@ namespace SignalRChat
         public string UserDepartment = "admin";
         public string UserImage = "/images/DP/dummy.png";
         protected string UploadFolderPath = "~/Uploads/";
-        ConnClass ConnC = new ConnClass();
+      
         private string fromUser = "";
         public string UserEmail = "";
 
@@ -32,7 +32,7 @@ namespace SignalRChat
         {
             string GetRegisteredUsersQuery = "select UserName,EnrollNo from tbl_users";
             RegisteredUsers = conc.GetAllFromColumn(GetRegisteredUsersQuery, "UserName");
-        
+
             if (Session["UserName"] != null)
             {
                 UserName = Session["UserName"].ToString();
