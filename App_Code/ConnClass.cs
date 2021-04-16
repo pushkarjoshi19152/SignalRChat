@@ -6,6 +6,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using MySql.Data.MySqlClient;
+
+
 namespace SignalRChat
 {
     public class ConnClass
@@ -14,14 +16,14 @@ namespace SignalRChat
         public MySqlDataAdapter sda;
         public MySqlDataReader sdr;
         public DataSet ds = new DataSet();
-        public MySqlConnection con = new MySqlConnection(@"server=localhost;user id=root;database=temp");
+        public MySqlConnection con = new MySqlConnection(@"Server=localhost;Database=temp;Uid=root;Pwd=");
 
         public bool IsExist(string Query)
         {
             bool check = false;
             using (cmd = new MySqlCommand(Query, con))
             {
-                
+
                 con.Open();
                 sdr = cmd.ExecuteReader();
                 if (sdr.HasRows)
@@ -31,6 +33,24 @@ namespace SignalRChat
             con.Close();
             return check;
 
+        }
+
+        public List<string> GetAllFromColumn(string Query, string ColumnName)
+        {
+            List<string> RetVal = new List<string>();
+            using (cmd = new MySqlCommand(Query, con))
+            {
+                con.Open();
+                sdr = cmd.ExecuteReader();
+                while (sdr.Read())
+                {
+                    RetVal.Add(sdr[ColumnName].ToString());
+                }
+                sdr.Close();
+                con.Close();
+            }
+
+            return RetVal;
         }
 
         public bool ExecuteQuery(string Query)

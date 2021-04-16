@@ -1,0 +1,116 @@
+C:\Users\win\source\repos\SR\SignalRChat\bin\SignalRChat.dll.config
+C:\Users\win\source\repos\SR\SignalRChat\bin\SignalRChat.dll
+C:\Users\win\source\repos\SR\SignalRChat\bin\SignalRChat.pdb
+C:\Users\win\source\repos\SR\SignalRChat\bin\AjaxControlToolkit.dll
+C:\Users\win\source\repos\SR\SignalRChat\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\win\source\repos\SR\SignalRChat\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\win\source\repos\SR\SignalRChat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\win\source\repos\SR\SignalRChat\bin\Microsoft.Owin.dll
+C:\Users\win\source\repos\SR\SignalRChat\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\win\source\repos\SR\SignalRChat\bin\Microsoft.Owin.Security.dll
+C:\Users\win\source\repos\SR\SignalRChat\bin\Newtonsoft.Json.dll
+C:\Users\win\source\repos\SR\SignalRChat\bin\Owin.dll
+C:\Users\win\source\repos\SR\SignalRChat\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\win\source\repos\SR\SignalRChat\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\win\source\repos\SR\SignalRChat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\win\source\repos\SR\SignalRChat\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\win\source\repos\SR\SignalRChat\bin\Microsoft.Owin.Security.xml
+C:\Users\win\source\repos\SR\SignalRChat\obj\Debug\SignalRChat.csprojAssemblyReference.cache
+C:\Users\win\source\repos\SR\SignalRChat\obj\Debug\SignalRChat.csproj.CoreCompileInputs.cache
+C:\Users\win\source\repos\SR\SignalRChat\obj\Debug\SignalRChat.csproj.CopyComplete
+C:\Users\win\source\repos\SR\SignalRChat\obj\Debug\SignalRChat.dll
+C:\Users\win\source\repos\SR\SignalRChat\obj\Debug\SignalRChat.pdb
+E:\coding\asp.net\SR\SignalRChat\bin\SignalRChat.dll.config
+E:\coding\asp.net\SR\SignalRChat\bin\SignalRChat.dll
+E:\coding\asp.net\SR\SignalRChat\bin\SignalRChat.pdb
+E:\coding\asp.net\SR\SignalRChat\bin\AjaxControlToolkit.dll
+E:\coding\asp.net\SR\SignalRChat\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\coding\asp.net\SR\SignalRChat\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\coding\asp.net\SR\SignalRChat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\coding\asp.net\SR\SignalRChat\bin\Microsoft.Owin.dll
+E:\coding\asp.net\SR\SignalRChat\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\coding\asp.net\SR\SignalRChat\bin\Microsoft.Owin.Security.dll
+E:\coding\asp.net\SR\SignalRChat\bin\Newtonsoft.Json.dll
+E:\coding\asp.net\SR\SignalRChat\bin\Owin.dll
+E:\coding\asp.net\SR\SignalRChat\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\coding\asp.net\SR\SignalRChat\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\coding\asp.net\SR\SignalRChat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\coding\asp.net\SR\SignalRChat\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\coding\asp.net\SR\SignalRChat\bin\Microsoft.Owin.Security.xml
+E:\coding\asp.net\SR\SignalRChat\obj\Debug\SignalRChat.csprojAssemblyReference.cache
+E:\coding\asp.net\SR\SignalRChat\obj\Debug\SignalRChat.csproj.CoreCompileInputs.cache
+E:\coding\asp.net\SR\SignalRChat\obj\Debug\SignalRChat.csproj.CopyComplete
+E:\coding\asp.net\SR\SignalRChat\obj\Debug\SignalRChat.dll
+E:\coding\asp.net\SR\SignalRChat\obj\Debug\SignalRChat.pdb
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\SignalRChat.dll.config
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\SignalRChat.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\SignalRChat.pdb
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\AjaxControlToolkit.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\Microsoft.Owin.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\Microsoft.Owin.Security.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\MySql.Data.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\Newtonsoft.Json.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\Owin.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\Google.Protobuf.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\Zstandard.Net.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\K4os.Compression.LZ4.Streams.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\BouncyCastle.Crypto.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\Ubiety.Dns.Core.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\Renci.SshNet.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\System.Buffers.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\K4os.Compression.LZ4.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\K4os.Hash.xxHash.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\System.Memory.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\System.Numerics.Vectors.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\Microsoft.Owin.Security.xml
+E:\coding\asp.net\copy of SR\SR\SignalRChat\bin\MySql.Data.xml
+E:\coding\asp.net\copy of SR\SR\SignalRChat\obj\Debug\SignalRChat.csprojAssemblyReference.cache
+E:\coding\asp.net\copy of SR\SR\SignalRChat\obj\Debug\SignalRChat.csproj.CoreCompileInputs.cache
+E:\coding\asp.net\copy of SR\SR\SignalRChat\obj\Debug\SignalRChat.csproj.CopyComplete
+E:\coding\asp.net\copy of SR\SR\SignalRChat\obj\Debug\SignalRChat.dll
+E:\coding\asp.net\copy of SR\SR\SignalRChat\obj\Debug\SignalRChat.pdb
+E:\coding\asp.net\geca signalr\bin\SignalRChat.dll.config
+E:\coding\asp.net\geca signalr\bin\SignalRChat.dll
+E:\coding\asp.net\geca signalr\bin\SignalRChat.pdb
+E:\coding\asp.net\geca signalr\bin\AjaxControlToolkit.dll
+E:\coding\asp.net\geca signalr\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\coding\asp.net\geca signalr\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\coding\asp.net\geca signalr\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\coding\asp.net\geca signalr\bin\Microsoft.Owin.dll
+E:\coding\asp.net\geca signalr\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\coding\asp.net\geca signalr\bin\Microsoft.Owin.Security.dll
+E:\coding\asp.net\geca signalr\bin\MySql.Data.dll
+E:\coding\asp.net\geca signalr\bin\Newtonsoft.Json.dll
+E:\coding\asp.net\geca signalr\bin\Owin.dll
+E:\coding\asp.net\geca signalr\bin\Google.Protobuf.dll
+E:\coding\asp.net\geca signalr\bin\Zstandard.Net.dll
+E:\coding\asp.net\geca signalr\bin\K4os.Compression.LZ4.Streams.dll
+E:\coding\asp.net\geca signalr\bin\BouncyCastle.Crypto.dll
+E:\coding\asp.net\geca signalr\bin\Ubiety.Dns.Core.dll
+E:\coding\asp.net\geca signalr\bin\Renci.SshNet.dll
+E:\coding\asp.net\geca signalr\bin\System.Buffers.dll
+E:\coding\asp.net\geca signalr\bin\K4os.Compression.LZ4.dll
+E:\coding\asp.net\geca signalr\bin\K4os.Hash.xxHash.dll
+E:\coding\asp.net\geca signalr\bin\System.Memory.dll
+E:\coding\asp.net\geca signalr\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\coding\asp.net\geca signalr\bin\System.Numerics.Vectors.dll
+E:\coding\asp.net\geca signalr\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\coding\asp.net\geca signalr\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\coding\asp.net\geca signalr\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\coding\asp.net\geca signalr\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\coding\asp.net\geca signalr\bin\Microsoft.Owin.Security.xml
+E:\coding\asp.net\geca signalr\bin\MySql.Data.xml
+E:\coding\asp.net\geca signalr\obj\Debug\SignalRChat.csprojAssemblyReference.cache
+E:\coding\asp.net\geca signalr\obj\Debug\SignalRChat.csproj.CoreCompileInputs.cache
+E:\coding\asp.net\geca signalr\obj\Debug\SignalRChat.csproj.CopyComplete
+E:\coding\asp.net\geca signalr\obj\Debug\SignalRChat.dll
+E:\coding\asp.net\geca signalr\obj\Debug\SignalRChat.pdb
