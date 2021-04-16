@@ -3,8 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta charset="utf-8"/>
+<head runat="server"> <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
   <!-- Bootstrap CSS -->
@@ -12,7 +11,7 @@
     integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous"/>
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="StyleSheet1.css"/>
+  <link rel="stylesheet" href="css/StyleSheet1.css"/>
 
     <title>WhatsApp Web</title>
      <link href="Content/bootstrap.css" rel="stylesheet" />
@@ -34,64 +33,76 @@
     <!--Jquery slimScroll -->
     <script type="text/javascript" src="Scripts/jquery.slimscroll.min.js"></script>
     <script type="text/javascript" src="Scripts/connection.js"></script>
+    
+   <%-- <script type="text/javascript" src="js\registerclientmethods"></script>
+   <script type="text/javascript" src="js\registerevents"></script>--%>
+    <script type="text/javascript" src="js\JavaScript.js"></script>
     <script type="text/javascript">
 
-        $(function () {
-            var chatHub = $.connection.chatHub;
-            // registerClientMethods(chatHub);
-            // Start Hub
-            $.connection.hub.start().done(function () {
+        function registerEvents(chatHub) {
 
-                console.log("connection succeded");
+            var name = '<%# this.UserName %>';
+            var badge = '<%# this.UserBadge %>';
+            var enrollno = '<%# this.UserEnrollNo %>';
+            var department = '<%# this.UserDepartment %>';
+            var email = '<%# this.UserEmail %>';
 
-            });
-            $('#sendbutton1').click(function () {
 
-                var msg = $('#txtmsg').val();
+            if (name.length > 0) {
+                chatHub.server.connect(name, badge, enrollno, department, email);
 
-                if (true) {
+            }
 
-                    // var userName = $('#hdUserName').val();
-                    var userName = "pushkar";
-                    //var date = GetCurrentDateTime(new Date());
-                    var date = "date";
 
-                    chatHub.server.sendMessageToAll(userName, msg, date);
-                    $("#textmsg1").val('');
+            // Clear Chat
+            $('#btnClearChat').click(function () {
+
+                var msg = $("#divChatWindow").html();
+
+                if (msg.length > 0) {
+                    chatHub.server.clearTimeout();
+                    $('#divChatWindow').html('');
+
                 }
             });
-            chatHub.client.messageReceived = function (userName, message, time, userimg) {
 
-                AddMessage(userName, message, time, userimg);
+            // Send Button Click Event
+            $('#btnSendMsg').click(function () {
 
-                // Display Message Count and Notification
+                var msg = $("#txtMessage").val();
 
-            }
-            function AddMessage(userName, message, time, userimg) {
+                if (msg.length > 0) {
 
-                alert("message received");
-            }
+                    var userName = $('#hdUserName').val();
 
-        })();
+                    // var date = GetCurrentDateTime(new Date());
+                    var date = 'date';
+                    chatHub.server.sendMessageToAll(userName, msg, date);
+                    $("#txtMessage").val('');
+                }
+            });
 
-
-
-
-
-
-
-
-
+            // Send Message on Enter Button
+            $("#txtMessage").keypress(function (e) {
+                if (e.which == 13) {
+                    $('#btnSendMsg').click();
+                }
+            });
+        };
     </script>
-
+   
 </head>
 <body>
     <form id="form1" runat="server">
-         <div class="back-container">
+        <div>
+             <div class="back-container">
     <div class="container-fluid front-container">
       <div class="back-top"></div>
       <div class="back-main"></div>
     </div>
+         <input id="hdId" type="hidden" />
+        <input id="PWCount" type="hidden" value="info" />
+        <input id="hdUserName" type="hidden" />
     <div class="container front-container1">
       <div class="row chat-top">
         <div class="col-sm-4 border-right border-secondary">
@@ -117,7 +128,7 @@
         </div>
         <div class="col-sm-8">
           <img src="images/p2.jpg" alt="" class="profile-image rounded-circle">
-          <span class="ml-2">Rahul Kumar</span>
+          <span id="spanUser" class="ml-2">Rahul Kumar</span>
           <span class="float-right mt-2">
             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
               xmlns="http://www.w3.org/2000/svg">
@@ -139,14 +150,82 @@
           <div class="contact-table-scroll">
             <table class="table table-hover">
               <tbody>
-                  <% foreach (string a in this.RegisteredUsers)
-                      { %>
-                  <tr>
+                <tr>
                   <td><img src="images/p2.jpg" alt="" class="profile-image rounded-circle"></td>
-                  <td><% =a %> <br> <small>achi chal rahi</small></td>
+                  <td>Rahul Kumar <br> <small>achi chal rahi</small></td>
                   <td><small>11:55 PM</small></td>
                 </tr>
-                    <% } %>
+                <tr>
+                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
+                  <td>Jack <br> <small>Bye tata</small></td>
+                  <td><small>10:09 PM</small></td>
+                </tr>
+                <tr>
+                  <td><img src="images/p4.jpg" alt="" class="profile-image rounded-circle"></td>
+                  <td>Bullywood Mafia <br> <small>Drg Drg Drg</small></td>
+                  <td><small>Monday</small></td>
+                </tr>
+                <tr>
+                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
+                  <td>Sumit Jha<br> <small>Corona ho gaya kya</small></td>
+                  <td><small>9/22/20</small></td>
+                </tr>
+                <tr>
+                  <td><img src="images/p6.jpg" alt="" class="profile-image rounded-circle"></td>
+                  <td>News Channel <br> <small>Bekar news only</small></td>
+                  <td><small>Sunday</small></td>
+                </tr>
+                <!-- start -->
+                <tr>
+                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
+                  <td>Ali <br> <small>Hello</small></td>
+                  <td><small>Sunday</small></td>
+                </tr>
+                <tr>
+                  <td><img src="images/p5.jpg" alt="" class="profile-image rounded-circle"></td>
+                  <td>Afreen <br> <small>Nahi main nahi janti</small></td>
+                  <td><small>Sunday</small></td>
+                </tr>
+                <tr>
+                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
+                  <td>Geeky Shows <br> <small>PPT nahi mila</small></td>
+                  <td><small>Sunday</small></td>
+                </tr>
+                <tr>
+                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
+                  <td>Sofia <br> <small>God Bless You</small></td>
+                  <td><small>Sunday</small></td>
+                </tr>
+                <tr>
+                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
+                  <td>Kunal <br> <small>Nikl lo</small></td>
+                  <td><small>Sunday</small></td>
+                </tr>
+                <tr>
+                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
+                  <td>Kunal <br> <small>Nikl lo</small></td>
+                  <td><small>Sunday</small></td>
+                </tr>
+                <tr>
+                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
+                  <td>Kunal <br> <small>Nikl lo</small></td>
+                  <td><small>Sunday</small></td>
+                </tr>
+                <tr>
+                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
+                  <td>Kunal <br> <small>Nikl lo</small></td>
+                  <td><small>Sunday</small></td>
+                </tr>
+                <tr>
+                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
+                  <td>Kunal <br> <small>Nikl lo</small></td>
+                  <td><small>Sunday</small></td>
+                </tr>
+                <tr>
+                  <td><img src="images/p1.jpg" alt="" class="profile-image rounded-circle"></td>
+                  <td>Kunal <br> <small>Nikl lo</small></td>
+                  <td><small>Sunday</small></td>
+                </tr>
                 <!-- end -->
               </tbody>
             </table>
@@ -154,8 +233,8 @@
 
         </div>
         <div class="col-sm-8 message-area">
-          <div class="message-table-scroll">
-            <table class="table">
+          <div id="msgarea" class="message-table-scroll">
+            <%--<table  class="table">
               <tbody>
                 <tr>
                   <td>
@@ -254,8 +333,8 @@
                 </tr>
                 <!-- end -->
               </tbody>
-            </table>
-          </div>
+            </table>--%>
+           </div>
           <div class="row message-box p-3">
             <div class="col-sm-2 mt-2">
               <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-emoji-smile" fill="currentColor"
@@ -279,9 +358,9 @@
                   d="M13 4a2 2 0 0 0 2 2V4h-2zM3 4a2 2 0 0 1-2 2V4h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 12a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
               </svg>
                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               <input type="text" id="txtmsg1"/>
+               <input type="text" id="txtMessage"/>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="button" id="sendbutton1" >
+                <input type="button" id="btnSendMsg" >
             </div>
             <div class="col-sm-8">
 
@@ -302,9 +381,7 @@
     </div>
 
   </div>
-
-        
+        </div> 
     </form>
-
 </body>
 </html>
