@@ -12,9 +12,10 @@ namespace SignalRChat
 
         public List<string> RegisteredUsers = new List<string>();
         ConnClass conc = new ConnClass();
-        string GetRegisteredUsersQuery = "select UserName from tbl_users";
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            string GetRegisteredUsersQuery = "select UserName from tbl_users";
             RegisteredUsers = conc.GetAllFromColumn(GetRegisteredUsersQuery, "UserName");
         }
 

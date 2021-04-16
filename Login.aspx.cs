@@ -31,7 +31,7 @@ namespace SignalRChat
                 Session["UserDepartment"] = Department;
                
                 Session["UserEmail"] = txtEmail.Value;
-                Response.Redirect("Chat.aspx");
+                Response.Redirect("WebForm1.aspx");
             }
             else
                 txtEmail.Value = "Invalid Email or Password!!";
