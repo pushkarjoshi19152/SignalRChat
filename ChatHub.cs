@@ -19,6 +19,7 @@ namespace SignalRChat
         public void Connect(string userName, string userBadge, string userEnrollNo, string userDepartment, string userEmail)
         {
             var id = Context.ConnectionId;
+            
 
 
             if (ConnectedUsers.Count(x => x.ConnectionId == id) == 0)
@@ -27,11 +28,12 @@ namespace SignalRChat
                 string logintime = DateTime.Now.ToString();
 
                 ConnectedUsers.Add(new Users { ConnectionId = id, UserName = userName, UserImage = UserImg, LoginTime = logintime,Badge=userBadge,EnrollNo=userEnrollNo,Department= userDepartment,Email=userEmail});
-                // send to caller
-                Clients.Caller.onConnected(id, userName, ConnectedUsers, CurrentMessage);
+                
+               //send to caller
+               Clients.Caller.onConnected(id, userName, ConnectedUsers, CurrentMessage);
 
                 // send to all except caller client
-                    Clients.AllExcept(id).onNewUserConnected(id, userName, UserImg, logintime);
+             //       Clients.AllExcept(id).onNewUserConnected(id, userName, UserImg, logintime);
             }
         }
 
