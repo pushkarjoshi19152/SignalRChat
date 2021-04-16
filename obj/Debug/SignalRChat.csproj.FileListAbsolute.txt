@@ -114,3 +114,5 @@ E:\coding\asp.net\geca signalr\obj\Debug\SignalRChat.csproj.CoreCompileInputs.ca
 E:\coding\asp.net\geca signalr\obj\Debug\SignalRChat.csproj.CopyComplete
 E:\coding\asp.net\geca signalr\obj\Debug\SignalRChat.dll
 E:\coding\asp.net\geca signalr\obj\Debug\SignalRChat.pdb
+E:\coding\asp.net\geca signalr\bin\Microsoft.Owin.xml
+E:\coding\asp.net\geca signalr\bin\Newtonsoft.Json.xml

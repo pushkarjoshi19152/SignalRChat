@@ -30,7 +30,7 @@ namespace SignalRChat
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            string GetRegisteredUsersQuery = "select UserName from tbl_users";
+            string GetRegisteredUsersQuery = "select UserName,EnrollNo from tbl_users";
             RegisteredUsers = conc.GetAllFromColumn(GetRegisteredUsersQuery, "UserName");
         
             if (Session["UserName"] != null)
@@ -42,7 +42,7 @@ namespace SignalRChat
                 UserEmail = Session["UserEmail"].ToString();
                 fromUser += UserName;
                 // GetUserImage(UserName);
-
+                
             }
             //else
             //    // Response.Redirect("Login.aspx");
