@@ -33,9 +33,9 @@ namespace SignalRChat
                 
                //send to caller
                Clients.Caller.onConnected(id, userName, ConnectedUsers, CurrentMessage);
-                string GetRegisteredUsersQuery = "SELECT * FROM tbl_users";
+                string GetRegisteredUsersQuery = "SELECT UserName,EnrollNo FROM tbl_users";
                 string[] ColumnName =  {"UserName","EnrollNo" };
-                RegisteredUsers = ConnC.GetAllFromColumn(GetRegisteredUsersQuery, ColumnName);
+                RegisteredUsers = ConnC.GetAllData(GetRegisteredUsersQuery);
 
                 Clients.Caller.loadRegisteredUsers(RegisteredUsers);
 

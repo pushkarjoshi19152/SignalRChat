@@ -35,21 +35,25 @@ namespace SignalRChat
 
         }
 
-        public List<MySqlDataReader> GetAllData(string Query)
+        public List<List<string>> GetAllData(string Query)
         {
-            List<MySqlDataReader> RetVal = new List<MySqlDataReader>();
+            List<List<string>> RetVal = new List<List<string>>();
             using (cmd = new MySqlCommand(Query, con))
             {
                 con.Open();
                 sdr = cmd.ExecuteReader();
                 while (sdr.Read())
                 {
-                    RetVal.Add(sdr);
+                    List<string> temp = new List<string>();
+                    for(int i = 0; i < sdr.FieldCount; i++)
+                    {
+                        temp.Add(sdr[i].ToString());
+                    }
+                    RetVal.Add(temp);
                 }
-                sdr.Close();
-                con.Close();
             }
-
+            sdr.Close();
+            con.Close();
             return RetVal;
         }
         public List<List<string>> GetAllFromColumn(string Query, params string [] ColumnName)
@@ -66,7 +70,7 @@ namespace SignalRChat
 
                     List<string> temp = new List<string>() ;
                     temp.Add(sdr[ColumnName[0]].ToString());
-                   // temp.Add(sdr[ColumnName[1]].ToString());
+                    //temp.Add(sdr[ColumnName[ColumnName.Length-1]].ToString());
                     RetVal.Add(temp);
                 }
                 sdr.Close();
