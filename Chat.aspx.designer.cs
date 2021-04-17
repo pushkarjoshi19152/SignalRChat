@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SignalRChat {
-    
-    
-    public partial class Chat {
-        
+namespace SignalRChat
+{
+
+
+    public partial class Chat
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace SignalRChat {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// ScriptManager1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace SignalRChat {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManager1;
-        
+
         /// <summary>
         /// btnSignOut control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace SignalRChat {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSignOut;
-        
+
         /// <summary>
         /// UpdatePanel2 control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace SignalRChat {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel UpdatePanel2;
-        
+
         /// <summary>
         /// AsyncFileUpload1 control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace SignalRChat {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.AsyncFileUpload AsyncFileUpload1;
-        
+
         /// <summary>
         /// UpdatePanel1 control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace SignalRChat {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
-        
+
         /// <summary>
         /// FileUpload1 control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace SignalRChat {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
-        
+
         /// <summary>
         /// btnChangePicModel control.
         /// </summary>

@@ -33,9 +33,9 @@ namespace SignalRChat
                 
                //send to caller
                Clients.Caller.onConnected(id, userName, ConnectedUsers, CurrentMessage);
-                string GetRegisteredUsersQuery = "SELECT * FROM tbl_users";
+                string GetRegisteredUsersQuery = "SELECT UserName,EnrollNo FROM tbl_users";
                 string[] ColumnName =  {"UserName","EnrollNo" };
-                RegisteredUsers = ConnC.GetAllFromColumn(GetRegisteredUsersQuery, ColumnName);
+                RegisteredUsers = ConnC.GetAllData(GetRegisteredUsersQuery);
 
                 Clients.Caller.loadRegisteredUsers(RegisteredUsers);
 
@@ -100,26 +100,34 @@ namespace SignalRChat
             return base.OnDisconnected(stopCalled);
         }
 
-        public void CreateTableFor(string table_name)
+        public void CreateTableFor(string table_name,string fromUserEN,string toUserEN)
         {
+            
+            string CreateTableQuery = "CREATE TABLE " + table_name + "(time varchar(30), message varchar(20),c" + fromUserEN + " boolean,c" + toUserEN + " boolean)";
 
-            string CreateTableQuery = "CREATE TABLE "+table_name+"(time varchar(30), message varchar(20))";
             ConnC.ExecuteQuery(CreateTableQuery);
+            
             
         }
 
-        public void AddMessageTo(string table_name,string message)
+        public void AddMessageTo(string table_name,string message,string fromUserEN,string toUserEN)
         {
+           
             try
             {
-                string AddMessageQuery = "insert into "+ table_name + "(time,message) values('"+ DateTime.Now.ToString() +"','"+ message +"')";
+                                   
+                string AddMessageQuery = "insert into " + table_name + "(time,message,c" + fromUserEN + ",c" + toUserEN + ") values('" + DateTime.Now.ToString() + "','" + message + "','" + 0 + "','" + 1 + "')";
+
                 ConnC.ExecuteQuery(AddMessageQuery);
+                
+                
+                
             }
             catch(Exception e)
             {
                 ConnC.con.Close();
-                CreateTableFor(table_name);
-                AddMessageTo(table_name,message);
+                CreateTableFor(table_name,fromUserEN,toUserEN);
+                AddMessageTo(table_name,message,fromUserEN,toUserEN);
             }
         }
 
@@ -130,8 +138,13 @@ namespace SignalRChat
 
             var toUser = ConnectedUsers.FirstOrDefault(x => x.ConnectionId == toUserId);
             var fromUser = ConnectedUsers.FirstOrDefault(x => x.ConnectionId == fromUserId);
+            
             string fromUserEnrollNo = fromUser.EnrollNo;
             string toUserEnrollNo = toUser.EnrollNo;
+
+            
+         
+
             //tablename for this conversation
             string table_name;
             try
@@ -140,12 +153,13 @@ namespace SignalRChat
             }
             catch(Exception e)
             {
+
                 string[] arr = new string[] { fromUserEnrollNo, toUserEnrollNo };
                 Array.Sort(arr);
                 fromUser.TableNameFor.Add(toUser.EnrollNo,"f"+arr[0]+"to"+arr[1]);
                 table_name = fromUser.TableNameFor[toUser.EnrollNo];
             }
-            AddMessageTo(table_name,message);
+            AddMessageTo(table_name,message,fromUserEnrollNo,toUserEnrollNo);
             if (toUser != null && fromUser != null)
             {
                 string CurrentDateTime = DateTime.Now.ToString();
