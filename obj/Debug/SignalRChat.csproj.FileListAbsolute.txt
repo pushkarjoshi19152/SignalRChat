@@ -148,3 +148,39 @@ C:\Users\Abc\Desktop\ASP.NET Project\123\SR_CHAT_OLD1\SR_CHAT_1APP\obj\Debug\Sig
 C:\Users\Abc\Desktop\ASP.NET Project\123\SR_CHAT_OLD1\SR_CHAT_1APP\obj\Debug\SignalRChat.csproj.CopyComplete
 C:\Users\Abc\Desktop\ASP.NET Project\123\SR_CHAT_OLD1\SR_CHAT_1APP\obj\Debug\SignalRChat.dll
 C:\Users\Abc\Desktop\ASP.NET Project\123\SR_CHAT_OLD1\SR_CHAT_1APP\obj\Debug\SignalRChat.pdb
+C:\Users\win\source\repos\SignalRChat1\bin\SignalRChat.dll.config
+C:\Users\win\source\repos\SignalRChat1\bin\SignalRChat.dll
+C:\Users\win\source\repos\SignalRChat1\bin\SignalRChat.pdb
+C:\Users\win\source\repos\SignalRChat1\bin\AjaxControlToolkit.dll
+C:\Users\win\source\repos\SignalRChat1\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\win\source\repos\SignalRChat1\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\win\source\repos\SignalRChat1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\win\source\repos\SignalRChat1\bin\Microsoft.Owin.dll
+C:\Users\win\source\repos\SignalRChat1\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\win\source\repos\SignalRChat1\bin\Microsoft.Owin.Security.dll
+C:\Users\win\source\repos\SignalRChat1\bin\MySql.Data.dll
+C:\Users\win\source\repos\SignalRChat1\bin\Newtonsoft.Json.dll
+C:\Users\win\source\repos\SignalRChat1\bin\Owin.dll
+C:\Users\win\source\repos\SignalRChat1\bin\Google.Protobuf.dll
+C:\Users\win\source\repos\SignalRChat1\bin\Zstandard.Net.dll
+C:\Users\win\source\repos\SignalRChat1\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\win\source\repos\SignalRChat1\bin\BouncyCastle.Crypto.dll
+C:\Users\win\source\repos\SignalRChat1\bin\Ubiety.Dns.Core.dll
+C:\Users\win\source\repos\SignalRChat1\bin\Renci.SshNet.dll
+C:\Users\win\source\repos\SignalRChat1\bin\System.Memory.dll
+C:\Users\win\source\repos\SignalRChat1\bin\System.Buffers.dll
+C:\Users\win\source\repos\SignalRChat1\bin\K4os.Compression.LZ4.dll
+C:\Users\win\source\repos\SignalRChat1\bin\K4os.Hash.xxHash.dll
+C:\Users\win\source\repos\SignalRChat1\bin\System.Numerics.Vectors.dll
+C:\Users\win\source\repos\SignalRChat1\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\win\source\repos\SignalRChat1\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\win\source\repos\SignalRChat1\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\win\source\repos\SignalRChat1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\win\source\repos\SignalRChat1\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\win\source\repos\SignalRChat1\bin\Microsoft.Owin.Security.xml
+C:\Users\win\source\repos\SignalRChat1\bin\MySql.Data.xml
+C:\Users\win\source\repos\SignalRChat1\obj\Debug\SignalRChat.csprojAssemblyReference.cache
+C:\Users\win\source\repos\SignalRChat1\obj\Debug\SignalRChat.csproj.CoreCompileInputs.cache
+C:\Users\win\source\repos\SignalRChat1\obj\Debug\SignalRChat.csproj.CopyComplete
+C:\Users\win\source\repos\SignalRChat1\obj\Debug\SignalRChat.dll
+C:\Users\win\source\repos\SignalRChat1\obj\Debug\SignalRChat.pdb

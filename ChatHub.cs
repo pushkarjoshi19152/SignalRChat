@@ -172,5 +172,9 @@ namespace SignalRChat
             }
 
         }
+        public void LoadPrivateChat(string EnrollNo)
+        {
+            //I want all of their previous message here
+        }
     }
 }

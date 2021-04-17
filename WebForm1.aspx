@@ -82,6 +82,25 @@
                     $("#txtMessage").val('');
                 }
             });
+            //click event on resgistered user name
+            $('.rusers').click(function () {
+                var i;
+                var ide = this.children;
+                for (i = 0; i < ide.length; i++) {
+                    var num = ide.item(i).addEventListener('click', function () {
+                        var num = this.id;
+                        console.log(num);
+                        chatHub.server.loadPrivateChat(num);
+                    });
+                   
+                }
+                
+                 
+
+            });
+
+
+            
 
             // Send Message on Enter Button
             $("#txtMessage").keypress(function (e) {
@@ -151,7 +170,7 @@
         <div class="col-sm-4 contacts">
           <div class="contact-table-scroll">
             <table class="table table-hover">
-              <tbody id="registered_users">
+              <tbody id="registered_users" class="rusers">
                  <%-- <% foreach (string a in this.RegisteredUsers)
                       { %>
                   <tr>

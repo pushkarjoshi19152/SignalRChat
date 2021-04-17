@@ -6,6 +6,7 @@
 
         console.log("connection succeded");
         registerEvents(chatHub);
+       
 
     });
     //chatHub.client.messageReceived = function (userName, message, time, userimg) {
@@ -180,7 +181,7 @@ function registerClientMethods(chatHub) {
      
         for (i = 0; i < users.length; i++)
         {
-            add = ' <tr id="'+users[i][1] +'"}> <td><img src="images/p2.jpg" alt="" class="profile-image rounded-circle" /></td>';
+            add = ' <tr id="'+users[i][1] +'" }> <td><img src="images/p2.jpg" alt="" class="profile-image rounded-circle" /></td>';
                
             add1 = '<td>' + users[i][0] + ' <br /> <small>achi chal rahi</small></td>';
 
