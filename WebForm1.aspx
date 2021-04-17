@@ -58,11 +58,11 @@
             // Clear Chat
             $('#btnClearChat').click(function () {
 
-                var msg = $("#divChatWindow").html();
+                var msg = $("#msgarea").html();
 
                 if (msg.length > 0) {
                     chatHub.server.clearTimeout();
-                    $('#divChatWindow').html('');
+                    $('#msgarea').html('');
 
                 }
             });
@@ -89,7 +89,8 @@
                     $('#btnSendMsg').click();
                 }
             });
-        };
+
+                    };
     </script>
    
 </head>

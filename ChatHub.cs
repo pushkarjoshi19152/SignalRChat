@@ -15,7 +15,7 @@ namespace SignalRChat
     {
         static List<Users> ConnectedUsers = new List<Users>();
         static List<Messages> CurrentMessage = new List<Messages>();
-        public List<string> RegisteredUsers = new List<string>();
+        public List<List<string>> RegisteredUsers = new List<List<string>>();
         ConnClass ConnC = new ConnClass();
 
         public void Connect(string userName, string userBadge, string userEnrollNo, string userDepartment, string userEmail)
@@ -33,8 +33,9 @@ namespace SignalRChat
                 
                //send to caller
                Clients.Caller.onConnected(id, userName, ConnectedUsers, CurrentMessage);
-                string GetRegisteredUsersQuery = "select UserName from tbl_users";
-                RegisteredUsers = ConnC.GetAllFromColumn(GetRegisteredUsersQuery, "UserName");
+                string GetRegisteredUsersQuery = "SELECT * FROM tbl_users";
+                string[] ColumnName =  {"UserName","EnrollNo" };
+                RegisteredUsers = ConnC.GetAllFromColumn(GetRegisteredUsersQuery, ColumnName);
 
                 Clients.Caller.loadRegisteredUsers(RegisteredUsers);
 

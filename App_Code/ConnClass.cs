@@ -52,16 +52,22 @@ namespace SignalRChat
 
             return RetVal;
         }
-        public List<string> GetAllFromColumn(string Query, string ColumnName)
+        public List<List<string>> GetAllFromColumn(string Query, params string [] ColumnName)
         {
-            List<string> RetVal = new List<string>();
+            List<List<string>> RetVal = new List<List<string>>();
+
+           
             using (cmd = new MySqlCommand(Query, con))
             {
                 con.Open();
                 sdr = cmd.ExecuteReader();
                 while (sdr.Read())
                 {
-                    RetVal.Add(sdr[ColumnName].ToString());
+
+                    List<string> temp = new List<string>() ;
+                    temp.Add(sdr[ColumnName[0]].ToString());
+                   // temp.Add(sdr[ColumnName[1]].ToString());
+                    RetVal.Add(temp);
                 }
                 sdr.Close();
                 con.Close();
