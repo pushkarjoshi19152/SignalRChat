@@ -100,6 +100,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
     <Content Include="css\StyleSheet1.css" />
     <Content Include="js\JavaScript.js" />
     <Content Include="Scripts\abc.js" />
