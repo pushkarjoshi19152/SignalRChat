@@ -180,9 +180,9 @@ function registerClientMethods(chatHub) {
      
         for (i = 0; i < users.length; i++)
         {
-            add = ' <tr> <td><img src="images/p2.jpg" alt="" class="profile-image rounded-circle" /></td>';
+            add = ' <tr id="'+users[i][1] +'"}> <td><img src="images/p2.jpg" alt="" class="profile-image rounded-circle" /></td>';
                
-            add1 = '<td>' + users[i] + ' <br /> <small>achi chal rahi</small></td>';
+            add1 = '<td>' + users[i][0] + ' <br /> <small>achi chal rahi</small></td>';
 
             add2 = '<td><small>11:55 PM</small></td></tr>';
             $('#registered_users').append(add + add1 + add2);        

@@ -25,13 +25,14 @@ namespace SignalRChat
         private string fromUser = "";
         public string UserEmail = "";
 
-        public List<string> RegisteredUsers = new List<string>();
+        public List<List<string>> RegisteredUsers = new List<List<string>>();
         ConnClass conc = new ConnClass();
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            string GetRegisteredUsersQuery = "select UserName,EnrollNo from tbl_users";
-            RegisteredUsers = conc.GetAllFromColumn(GetRegisteredUsersQuery, "UserName");
+            string GetRegisteredUsersQuery = "select UserName from tbl_users";
+            string []ColumnName =  { "UserName","EnrollNo"};
+            RegisteredUsers = conc.GetAllFromColumn(GetRegisteredUsersQuery, ColumnName);
 
             if (Session["UserName"] != null)
             {
@@ -42,7 +43,7 @@ namespace SignalRChat
                 UserEmail = Session["UserEmail"].ToString();
                 fromUser += UserName;
                 // GetUserImage(UserName);
-                
+
             }
             //else
             //    // Response.Redirect("Login.aspx");
