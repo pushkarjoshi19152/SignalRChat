@@ -133,5 +133,6 @@ namespace SignalRChat
             AsyncFileUpload1.SaveAs(Server.MapPath(this.UploadFolderPath) + filename);
         }
 
+        
     }
 }

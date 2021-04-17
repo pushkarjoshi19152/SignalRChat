@@ -103,7 +103,7 @@
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
     <Content Include="css\StyleSheet1.css" />
-    <Content Include="js\JavaScript.js" />
+    <Content Include="Scripts\abc.js" />
     <Content Include="WebForm1.aspx" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
@@ -207,7 +207,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="images\" />
     <Folder Include="Models\" />
-    <Folder Include="Uploads\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
