@@ -101,6 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\StyleSheet1.css" />
+    <Content Include="Scripts\abc.js" />
     <Content Include="WebForm1.aspx" />
     <None Include="packages.config">
       <SubType>Designer</SubType>

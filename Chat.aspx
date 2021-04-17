@@ -57,6 +57,9 @@
 
             });
 
+            
+            
+
 
 
             // Stop Title Alert
@@ -113,6 +116,7 @@
 
                 var msg = $("#txtMessage").val();
 
+
                 if (msg.length > 0) {
 
                     var userName = $('#hdUserName').val();
@@ -120,9 +124,13 @@
                     var date = GetCurrentDateTime(new Date());
 
                     chatHub.server.sendMessageToAll(userName, msg, date);
+
                     $("#txtMessage").val('');
                 }
+
             });
+
+
 
             // Send Message on Enter Button
             $("#txtMessage").keypress(function (e) {
@@ -196,6 +204,7 @@
                 }
             }
 
+            
 
             chatHub.client.sendPrivateMessage = function (windowId, fromUserName, message, userimg, CurrentDateTime) {
 
@@ -241,6 +250,7 @@
                 $('#' + ctrId).find('#divMessage').slimScroll({
                     height: ScrollHeight
                 });
+
             }
 
         }
@@ -423,6 +433,7 @@
 
                 var msg = $textBox.val();
                 if (msg.length > 0) {
+
                     chatHub.server.sendPrivateMessage(userId, msg);
                     $textBox.val('');
                 }
@@ -446,6 +457,9 @@
             $('#PriChatDiv').append($div);
             var msgTextbox = $div.find("#txtPrivateMessage");
             $(msgTextbox).emojioneArea();
+
+            
+
         }
 
         function ParseEmoji(div) {
@@ -545,6 +559,13 @@ function IsImageFile(fileF) {
     }
     return true;
 }
+        //$('#btnSend').click(function () {
+        //    $textBox = $div.find("#txtPrivateMessage");
+
+        //    var msg = $textBox.val();
+        //    chatHub.server.AddMessageTo(table_name, msg);
+        //});
+
 
     </script>
 
@@ -646,8 +667,7 @@ function IsImageFile(fileF) {
                             <div class="input-group" style="float: right;">
                                 <input class="form-control" style="visibility: hidden;" />
                                 <span class="input-group-btn">
-                                    <input type="button" class="btn btn-primary btn-flat" id="btnSendMsg" value="send" />
-
+                                     <input type="button" class="btn btn-primary btn-flat" id="btnSendMsg" value="send" />
                                 </span>
                                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
 
@@ -692,8 +712,7 @@ function IsImageFile(fileF) {
                     <div class="col-md-12">
                         <div class="row" id="PriChatDiv">
                         </div>
-                        <textarea class="form-control" style="visibility: hidden;"></textarea>
-
+                        <textarea class="form-control" style="visibility: hidden;"></textarea>&nbsp;
 
 
 
