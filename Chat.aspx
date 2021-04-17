@@ -38,7 +38,7 @@
             // Start Hub
             $.connection.hub.start().done(function () {
 
-                registerEvents(chatHub)
+                registerEvents(chatHub);
 
             });
 

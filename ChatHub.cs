@@ -6,6 +6,7 @@ using System.Web;
 using Microsoft.AspNet.SignalR;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using MySql.Data.MySqlClient;
 
 
 namespace SignalRChat
@@ -14,11 +15,13 @@ namespace SignalRChat
     {
         static List<Users> ConnectedUsers = new List<Users>();
         static List<Messages> CurrentMessage = new List<Messages>();
+        public List<List<string>> RegisteredUsers = new List<List<string>>();
         ConnClass ConnC = new ConnClass();
 
         public void Connect(string userName, string userBadge, string userEnrollNo, string userDepartment, string userEmail)
         {
             var id = Context.ConnectionId;
+            
 
 
             if (ConnectedUsers.Count(x => x.ConnectionId == id) == 0)
@@ -27,11 +30,17 @@ namespace SignalRChat
                 string logintime = DateTime.Now.ToString();
 
                 ConnectedUsers.Add(new Users { ConnectionId = id, UserName = userName, UserImage = UserImg, LoginTime = logintime,Badge=userBadge,EnrollNo=userEnrollNo,Department= userDepartment,Email=userEmail});
-                // send to caller
-                Clients.Caller.onConnected(id, userName, ConnectedUsers, CurrentMessage);
+                
+               //send to caller
+               Clients.Caller.onConnected(id, userName, ConnectedUsers, CurrentMessage);
+                string GetRegisteredUsersQuery = "SELECT UserName,EnrollNo FROM tbl_users";
+                string[] ColumnName =  {"UserName","EnrollNo" };
+                RegisteredUsers = ConnC.GetAllData(GetRegisteredUsersQuery);
+
+                Clients.Caller.loadRegisteredUsers(RegisteredUsers);
 
                 // send to all except caller client
-                    Clients.AllExcept(id).onNewUserConnected(id, userName, UserImg, logintime);
+             //       Clients.AllExcept(id).onNewUserConnected(id, userName, UserImg, logintime);
             }
         }
 
